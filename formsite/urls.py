@@ -15,11 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from django.conf.urls import url
+from django.conf.urls import url, include
 from basicapp import views
+
 
 urlpatterns = [
     url(r'^$', views.index, name='index'),
     url(r'^form/', views.form_name_view, name='form'),
+    url(r'^users/', include('user_form.urls')),
     path('admin/', admin.site.urls),
 ]

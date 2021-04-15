@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from . import forms
+from basicapp import forms
 
 # Create your views here.
 
